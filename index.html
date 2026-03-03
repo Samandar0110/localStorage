@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="remove">remove</button>
+    <button class="clear">clear</button>
+    <script>
+        //localStorage - mahalliy xotira
+
+        //xotiraga saqlash
+        // localStorage.setItem('key', 'value')
+
+        //xotiraga olish
+        // localStorage.getItem('key')
+
+        //xotiradan ochirish
+        // localStorage.removeItem('key')
+
+        //xotirani tozalash
+        // localStorage.clear()
+
+
+        const remove = document.querySelector(".remove")
+        const clear = document.querySelector(".clear")
+
+        let ism = 'dumbulim'
+        let tema = 'mikki mous'
+        let tema2 = 'Aladdin'
+
+        localStorage.setItem('a', ism)
+        localStorage.setItem('b', tema)
+        localStorage.setItem('c', tema2)
+        remove.addEventListener("click", function(){
+        localStorage.removeItem('a')
+        })
+        clear.addEventListener("click", () =>{
+            localStorage.clear()
+        })
+    </script>
+</body>
+</html>
